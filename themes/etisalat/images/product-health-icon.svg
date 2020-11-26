@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
+  <g id="health-icon" transform="translate(-0.469)">
+    <g id="Group_33" data-name="Group 33" transform="translate(0.469)">
+      <g id="Ellipse_139" data-name="Ellipse 139" fill="#fff" stroke="#e5e5e5" stroke-width="1">
+        <circle cx="43" cy="43" r="43" stroke="none"/>
+        <circle cx="43" cy="43" r="42.5" fill="none"/>
+      </g>
+      <g id="health" transform="translate(16.5 17.471)">
+        <path id="Subtraction_9" data-name="Subtraction 9" d="M26.963,50.553h0L3.909,27.409A16.647,16.647,0,0,1,26.963,3.61,16.709,16.709,0,0,1,37.319,0a16.534,16.534,0,0,1,11.77,4.875,16.745,16.745,0,0,1,.964,22.493L26.963,50.553ZM16.607,1.281a15.263,15.263,0,0,0-10.863,4.5,15.455,15.455,0,0,0-.89,20.761l22.11,22.195L49.108,26.5a15.433,15.433,0,0,0-.926-20.723,15.371,15.371,0,0,0-20.805-.855l-.415.353-.415-.353A15.374,15.374,0,0,0,16.607,1.281Zm5.269,37.37h0v-.208H22.3l-.423.208Z" transform="translate(0 0)" fill="#70a111" stroke="#70a111" stroke-width="1"/>
+        <path id="Path_468" data-name="Path 468" d="M47.382,47.58l-9.16-20.021L29.987,40.4H16.708a14.293,14.293,0,0,0,1.572,1.458h13.16l6.435-10.03L46.808,51.35l7.665-9.41H66.65a14.381,14.381,0,0,0,1.592-1.458H53.163Z" transform="translate(-15.238 -18.99)" fill="#70a111" stroke="#70a111" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

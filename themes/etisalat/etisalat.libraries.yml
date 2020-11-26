@@ -1,0 +1,19 @@
+etisalat-css:
+  version: VERSION
+  css:
+    theme:
+      css/theme.css: {}
+      css/font-awesome.min.css: {}
+
+bootstrap:
+  version: VERSION
+  css:
+    theme:
+      css/bootstrap.css: {}
+  js:
+    js/bootstrap.min.js: {}
+
+popper:
+  version: VERSION
+  js:
+    js/popper.min.js: {}

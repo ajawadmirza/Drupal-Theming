@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62">
+  <g id="great-text-envo-icon" transform="translate(-1 -1)">
+    <path id="Path_349" data-name="Path 349" d="M5,57H7v2H5Z" fill="#727272"/>
+    <path id="Path_350" data-name="Path 350" d="M30,21a9,9,0,1,0,9,9A9.01,9.01,0,0,0,30,21Zm0,16a7,7,0,1,1,7-7A7.009,7.009,0,0,1,30,37Z" fill="#727272"/>
+    <path id="Path_351" data-name="Path 351" d="M29,33h2v2H29Z" fill="#727272"/>
+    <path id="Path_352" data-name="Path 352" d="M29,29h2v2H29Z" fill="#727272"/>
+    <path id="Path_353" data-name="Path 353" d="M29,25h2v2H29Z" fill="#727272"/>
+    <path id="Path_354" data-name="Path 354" d="M58,25H51V1H6A5.006,5.006,0,0,0,1,6V58a5.006,5.006,0,0,0,5,5H49V55h2V35h7a5,5,0,0,0,0-10ZM49,13H11V3H49ZM6,3H9V53H6a4.948,4.948,0,0,0-3,1.026V6A3,3,0,0,1,6,3ZM47,61H6a3,3,0,0,1,0-6H43v2H9v2H45V55h2Zm2-8H11V15H49V25H48a2.993,2.993,0,0,0-2.821,2.018c-.06,0-.118-.018-.179-.018H42.637a13,13,0,1,0,0,6H45c.061,0,.119-.013.179-.018A2.993,2.993,0,0,0,48,35h1ZM42.949,29H45v2H42.949c.026-.331.051-.662.051-1S42.975,29.331,42.949,29ZM41,30A11,11,0,1,1,30,19,11.013,11.013,0,0,1,41,30Zm17,3H48a1,1,0,0,1-1-1V28a1,1,0,0,1,1-1H58a3,3,0,0,1,0,6Z" fill="#727272"/>
+    <path id="Path_355" data-name="Path 355" d="M15,11H25a2,2,0,0,0,2-2V7a2,2,0,0,0-2-2H15a2,2,0,0,0-2,2V9A2,2,0,0,0,15,11Zm4-2V7h2V9Zm6,0H23V7h2ZM15,7h2V9H15Z" fill="#727272"/>
+    <path id="Path_356" data-name="Path 356" d="M37,51H47V43H37Zm2-6h6v4H39Z" fill="#727272"/>
+    <path id="Path_357" data-name="Path 357" d="M13,49h2v2H13Z" fill="#727272"/>
+    <path id="Path_358" data-name="Path 358" d="M17,49H35v2H17Z" fill="#727272"/>
+    <path id="Path_359" data-name="Path 359" d="M13,45H31v2H13Z" fill="#727272"/>
+    <path id="Path_360" data-name="Path 360" d="M33,45h2v2H33Z" fill="#727272"/>
+    <path id="Path_361" data-name="Path 361" d="M47,5H37v6H47ZM45,9H39V7h6Z" fill="#727272"/>
+  </g>
+</svg>

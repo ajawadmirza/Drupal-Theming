@@ -1,0 +1,10 @@
+name: Etisalat
+type: theme
+description: Etisalat - Api Connect Developer Portal
+core: 8.x
+base theme: classy
+screenshot: screenshot.svg
+libraries: 
+  - etisalat/etisalat-css
+  - etisalat/bootstrap
+  - etisalat/popper

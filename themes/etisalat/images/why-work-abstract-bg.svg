@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="281" height="587" viewBox="0 0 281 587">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1228" data-name="Rectangle 1228" width="281" height="587" transform="translate(0 1555)" fill="#fff"/>
+    </clipPath>
+    <filter id="Rectangle" x="-674.923" y="-211.653" width="1001.559" height="1001.559" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.455"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="why-work-abstract-bg" transform="translate(0 -1555)" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, 0, 1555)" filter="url(#Rectangle)">
+      <path id="Rectangle-2" data-name="Rectangle" d="M95.859,4.141,578.585,24.992c52.942,2.287,97.713,47.058,100,100l20.851,482.726c2.287,52.942-38.777,94.006-91.719,91.719L124.992,678.585c-52.942-2.287-97.713-47.058-100-100L4.141,95.859C1.854,42.918,42.918,1.854,95.859,4.141Z" transform="translate(-671.65 286.13) rotate(-45)" fill="rgba(132,135,137,0.05)" opacity="0.36"/>
+    </g>
+  </g>
+</svg>

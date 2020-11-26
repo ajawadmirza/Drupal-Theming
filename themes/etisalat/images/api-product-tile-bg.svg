@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="520" viewBox="0 0 255 520">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1231" data-name="Rectangle 1231" width="255" height="520" transform="translate(702 412)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="api-product-tile-bg" transform="translate(-702 -412)" opacity="0.65" clip-path="url(#clip-path)">
+    <rect id="Rectangle" width="425.388" height="425.388" rx="100" transform="translate(663.136 670.359) rotate(-45)" fill="#f8f8f8"/>
+  </g>
+</svg>
