@@ -30,9 +30,30 @@
   font-style: normal;
 }
 /*------------------- NeoSans Fonts End -------------------*/
-
+.full-width.group-right{
+  width: 100%;
+}
+html,body {
+  height: 100%;
+  display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
 body{
   font-family: 'Conv_Lato-Regular';
+}
+main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+}
+footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 /*------------------- Lato Fonts Start -------------------*/
 @font-face {
@@ -47,13 +68,8 @@ body{
 /*------------------- Lato Fonts End -------------------*/
 
 .etisalat-api-navbar,
-.etisalat-api-primary-btn,
-.etisalat-api-primary-btn a:hover
-{
+.etisalat-api-primary-btn{
   text-transform: uppercase;
-}
-.etisalat-api-primary-btn a{
-  color: #ffffff;
 }
 .etisalat-api-primary-btn,
 .etisalat-api-orange-btn{
@@ -65,10 +81,6 @@ body{
   padding-bottom: 0.45rem;
   padding-left: 1rem;
 }
-.etisalat-api-primary-btn,
-.etisalat-api-orange-btn{
-  
-}
 .etisalat-api-primary-btn{
   background-color: #91B70E;
   border:0.125rem #91B70E solid;
@@ -78,7 +90,7 @@ body{
   border:0.125rem #000000 solid;
 }
 .etisalat-api-primary-btn:hover,
-.api-user-form-login .sign-btn:hover{
+.api-user-form-login  .sign-in-btn:hover{
   background-color:transparent;
 }
 
@@ -115,14 +127,17 @@ a{
 .promo-content-title,
 .promo-item-title,
 .promo-item-title,
-.etisalat-api-page-description {
+.etisalat-api-page-description,
+.product-tile-title,
+.steps-content-title {
   font-family: 'Conv_NeoSans';
 }
 .etisalat-api-navbar .nav-item a:hover,
 .read-more:hover,
 .quick-links-main-container ul li a:hover,
 .footer-links-nav li a:hover,
-.api-user-forgot-password a:hover{
+.api-user-forgot-password a:hover,
+.api-breadcrumb .breadcrumb a:hover{
   color: #719e19;
 }
 .register-sign-container .nav-item a.etisalat-api-orange-btn,
@@ -151,19 +166,20 @@ a{
   padding-bottom: .4rem;
 }
 .etisalat-api-navbar .navbar-toggler-icon,
-.promo-item-title{
+.promo-item-title,
+.api-breadcrumb .breadcrumb .active {
   color:  #91B70E;
 }
 /*------------------- Header Nav End -------------------*/
 
 .main-banner{
   background: #ffffff url("../images/home-banner.png");
-  min-height: 615px;
+  height: 615px;
   margin-top: 4.2rem;
 }
 .main-inner-banner{
   background: #ffffff url("../images/inner-banner.svg");
-  min-height: 303px;
+  height: 320px;
   margin-top: 3.8rem;
 }
 .main-inner-banner,
@@ -180,12 +196,14 @@ a{
 .product-tile,
 .product-tile-main-header, 
 .product-tile-description,
-.product-tile-view-link{
+.product-tile-view-link,
+.product-api-links{
   position: relative;
 }
 .product-tile-main-header, 
 .product-tile-description,
-.product-tile-view-link {
+.product-tile-view-link,
+.product-api-links {
   z-index: 1;
 }
 .main-banner-content {
@@ -206,8 +224,9 @@ a{
 .links-title-mobile-view,
 .quick-links-main-container ul a,
 .quick-access-link,
-.quick-links-main-container .accordion-menu a,
-.quick-links-main-container .accordion-menu a:hover  {
+.quick-links-main-container .footer-accordion-menu a,
+.quick-links-main-container .footer-accordion-menu a:hover,
+.steps-content-title  {
   color: #353738;
 }
 .main-banner-content p{
@@ -230,8 +249,8 @@ a{
 .read-more,
 .api-sigin-forgot-password .form-check label,
 .api-user-form-or,
-.etisalat-api-create-account,
-.etisalat-api-create-account a:hover,
+.api-form-footer,
+.api-form-footer a:hover,
 .form-control{
   color: #3B4550;
 }
@@ -241,18 +260,33 @@ a{
   margin-bottom: .8rem;
 }
 .etisalat-api-sub-title,
-.etisalat-api-page-description{
+.etisalat-api-page-description,
+.api-user-form-wrapper .form-label{
   color: #6D747C;
+}
+.form-inner-content{
+  color: #535353;
+  margin-top: 1rem;
+  font-size: .8rem;
 }
 .etisalat-api-sub-title,
 .howto-steps-main-container,
 .promo-content-container,
 .promo-list-container,
 .promo-software-developers-container,
-.accordion-menu > a,
+.footer-accordion-menu > a,
 .quick-links-main-container,
-.api-user-form-wrapper {
+.api-user-form-wrapper,
+.api-user-form-wrapper .form-label {
   position: relative;
+}
+.api-user-create-form .form-label.required:after {
+  content: "*";
+  color: #ff2121;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: -1rem;
 }
 .promo-software-developers-container:before,
 .promo-companies-container:before,
@@ -278,7 +312,12 @@ a{
 .product-tile-api-inlcuded,
 .product-tile:after,
 .customer-detail,
-.health-check{
+.health-check,
+.wallet-management,
+.billing-score,
+.steps-content-label,
+.product-tile-icon img,
+.password-policy-status li{
   display: block;
 }
 .promo-software-developers-container:before{
@@ -345,12 +384,14 @@ ul{
 .promo-item,
 .promo-content-container,
 .quick-links-main-container .quick-access-list li a,
-.api-user-form-login,
+.api-user-form-login ,
 .api-sigin-forgot-password,
 .api-user-form-or,
 .product-tile,
 .product-tile-main-header,
-.product-tile-container{
+.product-tile-container,
+.subscribe-container,
+.steps-list-container{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,16 +405,19 @@ ul{
 .promo-content-container,
 .etisalat-api-primary-btn,
 .quick-links-main-container .quick-access-list li a,
-.api-user-form-login,
+.api-user-form-login ,
 .api-sigin-forgot-password,
-.product-tile-main-header{
+.product-tile-main-header,
+.subscribe-container,
+.steps-list-container{
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 .promo-item,
-.product-tile-main-header{
+.product-tile-main-header,
+.subscribe-container{
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -396,6 +440,16 @@ ul{
 .promo-list-container{
   z-index: 3;
 }
+.api-products .product-tile-container{
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 87.5rem;
+  flex: 0 0 87.5rem;
+  max-width: 87.5rem;
+}
 .promo-list-container,
 .promo-content-container,
 .etisalat-api-primary-btn,
@@ -412,7 +466,7 @@ ul{
 .etisalat-api-primary-btn,
 .howto-steps-item,
 .quick-links-main-container .quick-access-list li a,
-.api-user-form-login{
+.api-user-form-login {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -421,13 +475,17 @@ ul{
 .quick-links-main-container .quick-access-list li a,
 .api-user-form-header-content,
 .api-user-form-or,
-.etisalat-api-create-account,
-.api-inner-header-content {
+.api-form-footer,
+.api-inner-header-content,
+.steps-icon {
   text-align: center;
 }
 .etisalat-api-primary-btn i{
-  margin-left: 1rem;
   font-size: 1.5rem;
+}
+.etisalat-api-primary-btn i,
+.math-question{
+  margin-left: 1rem;
 }
 .promo-software-developers-container{
   overflow: hidden;
@@ -443,32 +501,38 @@ ul{
 .quick-links-list li a,
 .quick-access-list li,
 .footer-links-nav li,
-.etisalat-api-create-account a,
-.product-tile-api-inlcuded{
+.api-form-footer a,
+.product-tile-api-inlcuded,
+.steps-icon img,
+.api-user-form-wrapper .form-label,
+.api-user-create-form .form-label.required:after,
+.math-question{
   display: inline-block;
 }
 .promo-item{
   padding-bottom: 5.3125rem;
 }
-.promo-item:last-child{
+.promo-item:last-child,
+.api-breadcrumb .breadcrumb{
   padding-bottom: 0;
 }
 .promo-companies-container:before,
 .promo-companies-container:after,
 .top-left-dotted,
 .bottom-right-dotted,
-.accordion-menu > a:after,
+.footer-accordion-menu > a:after,
 .footer-right-lines-bg,
 .footer-left-lines-bg {
   position: absolute;
 }
 .promo-companies-container:before,
 .api-user-form-admin .btn,
-.api-user-form-login .sign-btn,
+.api-user-form-login  .sign-in-btn,
+.api-user-form-login  .reset-btn,
+.api-user-form-login  .sign-up-btn,
 .password-field-container,
 .password-field-container .password-field,
-.password-field-container,
-.password-field-container .password-field{
+.password-field-container{
   width: 100%;
 }
 .promo-companies-container:before {
@@ -481,7 +545,6 @@ ul{
 .promo-companies-container:before {
   z-index: 1;
 }
-
 .promo-companies-container:after{
   background: url("../images/why-work-dotted-bg.svg");
   background-repeat: no-repeat;
@@ -495,7 +558,7 @@ ul{
 }
 .promo-companies-container:after,
 .bottom-right-dotted,
-.accordion-menu > a:after,
+.footer-accordion-menu > a:after,
 .footer-right-lines-bg,
 .api-user-form-or-container:before,
 .api-user-form-or-container:after {
@@ -539,13 +602,20 @@ ul{
   height: 8.125rem;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 1.875rem;
+ /*  margin-bottom: 1.875rem; */
+  margin-bottom:4.75rem;
 }
 .customer-detail{
   background: url("../images/product-customer-icon.svg");
 }
 .health-check{
   background: url("../images/product-health-icon.svg");
+}
+.wallet-management{
+  background: url("../images/wallet-management-icon.svg");
+}
+.billing-score{
+  background: url("../images/billing-score-icon.svg");
 }
 .product-tile:after{
   background: url("../images/api-product-tile-bg.svg");
@@ -562,7 +632,9 @@ ul{
 .api-admin-icon,
 .health-check,
 .product-tile:after,
-.customer-detail{
+.customer-detail,
+.wallet-management,
+.billing-score{
   background-repeat: no-repeat;
 }
 .promo-content-detail,
@@ -574,8 +646,7 @@ ul{
   margin-top: .8rem;
 }
 .howto-steps-content p,
-.footer-links-nav,
-.api-sigin-forgot-password {
+.footer-links-nav {
   margin-bottom: 1rem;
 }
 .p-left-0{
@@ -602,9 +673,9 @@ ul{
   padding-top: .5rem;
 }
 .quick-links-main-container ul li a,
-.accordion-menu a,
+.footer-accordion-menu a,
 .api-user-forgot-password a,
-.etisalat-api-create-account,
+.api-form-footer,
 a.etisalat-api-primary-btn,
 .etisalat-api-primary-btn{
   text-decoration: none;
@@ -627,7 +698,8 @@ a.etisalat-api-primary-btn,
   padding-bottom: 4rem;
 }
 .row.howto-steps-item:last-child,
-.etisalat-api-page-description {
+.etisalat-api-page-description,
+.api-form-footer p {
   margin-bottom: 0;
 }
 .footer-links-nav,
@@ -651,14 +723,14 @@ a.etisalat-api-primary-btn,
   font-size: 0.75rem;
   line-height: 1.2;
 }
-.accordion-menu > a {
+.footer-accordion-menu > a {
   position: relative;
 }
-.accordion-menu > a:after {
+.footer-accordion-menu > a:after {
   content: "\f078"; /* fa-chevron-down */
   font-family: 'FontAwesome';
 }
-.accordion-menu > a[aria-expanded="true"]:after {
+.footer-accordion-menu > a[aria-expanded="true"]:after {
   content: "\f077"; /* fa-chevron-up */
 }
 .footer-links-Logo {
@@ -683,7 +755,6 @@ a.etisalat-api-primary-btn,
   width: 100%;
   min-height: 100%;
 }
-
 .api-user-form-inner-wrapper {
   max-width: 64.625rem;
   flex: 0 0 64.625rem;
@@ -696,7 +767,7 @@ a.etisalat-api-primary-btn,
   background-color: #ffffff;
   margin-bottom: 0;
 }
-.api-user-form-login{
+.api-user-form-login {
   -webkit-box-pack: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
@@ -707,7 +778,7 @@ a.etisalat-api-primary-btn,
   margin-top: 0;
   margin-bottom: 5.5rem;
 }
-.api-user-form-login,
+.api-user-form-login ,
 .api-user-form-inner-wrapper{
   margin-right: auto;
   margin-left: auto;
@@ -719,15 +790,13 @@ a.etisalat-api-primary-btn,
   font-size: 1.125rem;
 }
 .api-user-form-inner {
-  max-width: 19.75rem;
+  width: 320px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 19.75rem;
-  flex: 0 0 19.75rem;
+  -ms-flex: 0 0 320px;
+  flex: 0 0 320px;
 }
-.form-control{
-  height: 2.75rem;
-}
-.api-sigin-forgot-password{
+.api-sigin-forgot-password,
+#etisalat-navbar{
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
     justify-content: space-between;
@@ -748,7 +817,7 @@ a.etisalat-api-primary-btn,
 .api-sigin-forgot-password .form-check label{
   padding-left: 0.75rem;
 }
-.api-user-form-login .sign-btn{
+.api-user-form-login  .sign-in-btn{
   background-color: #3B4550;
   border-color: #3B4550;
 }
@@ -767,12 +836,12 @@ a.etisalat-api-primary-btn,
           flex-direction: column;
 }
 .product-tile {
-  width: 28rem;
-  height: 20rem;
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
+  width:100%;
+  min-height: 20rem;
+  padding-top: 1.4rem;
+  padding-right: 1.4rem;
+  padding-bottom: 1.4rem;
+  padding-left: 1.4rem;
   box-shadow: 0 0.4rem 1rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.3125rem;
 }
@@ -797,11 +866,11 @@ a.etisalat-api-primary-btn,
 .api-user-form-or-container:before{
   top: -8rem;
 }
-.etisalat-api-create-account a,
+.api-form-footer a,
 .product-tile-api-inlcuded{
   color: #FF9D00;
 }
-.etisalat-api-create-account a{
+.api-form-footer a{
   padding-left: 0.8125rem;
 }
 .password-field-container,
@@ -843,31 +912,143 @@ a.etisalat-api-primary-btn,
 .api-inner-header-content {
   margin-top: 4rem;
 }
-section.api-inner-page {
-  margin-bottom: 3rem;
+.api-inner-page {
+  margin-bottom: 2rem;
   margin-top: 3rem;
 }
+/* .product-tile .product-tile-icon {
+  width: 6.1rem;
+}
 .product-tile-icon {
-  width: 5.375rem;
-  height: 5.375rem;
+  width: 5.5rem;
+}
+.product-tile .product-tile-icon,
+.product-tile-icon {
+  height: 5.5rem;
+} */
+.product-tile-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 86px;
+  flex: 0 0 86px;
+  max-width: 86px;
 }
 .product-tile-header {
-  padding-left: 1rem;
-  width: 19rem;
+  margin-left: 1rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+      flex: 1;
+  max-width: 100%;
+}
+.api-product-summary .product-tile-header{
+  width: auto;
 }
 .product-tile-title {
   font-size: 1.375rem;
   margin-bottom: .3rem;
 }
+.product-tile,
+.product-tile-main-header,
+.product-tile-icon,
+.product-tile-header,
+.product-tile-description,
+.api-product-summary .product-tile-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 .product-tile-description {
   margin-top: 2.0625rem;
   margin-bottom: 2.0625rem;
-}
-.product-tile-view-link span{
-  text-transform: capitalize;
+  color: #575757;
 }
 .product-tile-item {
-  margin-right: 2rem;
+  /*margin-right: 1rem;*/
+  margin-bottom: 1rem;
+}
+.api-product-summary-heading {
+  margin-left:1rem;
+}
+.api-product-summary .product-tile-description {
+  margin-top: 0;
+}
+.api-product-summary .product-tile-description,
+.steps-content-description{
+  margin-bottom: 0;
+}
+.api-product-summary .product-tile-header{
+  margin-left:0
+}
+.api-breadcrumb .breadcrumb {
+  background-color: transparent;
+}
+.api-breadcrumb .breadcrumb a {
+  color: #727272;
+}
+.etisalat-api-navbar .nav-item.active a {
+  border-bottom: 0.25rem solid #FF9D00;
+}
+.etisalat-api-navbar .nav-item.active a:hover{
+  color:#333333;
+  border-color: #ffc107;
+}
+.subscribe-container {
+  text-align: right;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+.api-products .product-tile .etisalat-api-primary-btn {
+  font-size: .9rem;
+}
+.api-product-summary-title{
+  /* background-color: #f8f8f8; */
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #E5E5E5;
+}
+.steps-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 8.666667%;
+  flex: 0 0 8.666667%;
+  max-width: 8.666667%;
+  padding-top: .5rem;
+}
+.steps-content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 83.333333%;
+  flex: 0 0 91.333333%;
+  max-width: 91.333333%;
+}
+.steps-icon,
+.steps-content {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.steps-content-label {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom:1rem;
+}
+.steps-content-label,
+.get-started-mail,
+.get-started-mail:hover {
+  color: #FF9D00;
+}
+.steps-content-title {
+  font-size: 1.375rem; 
+  margin-bottom:1rem;
+}
+.steps-content-description{
+  color:#727272;
+}
+.steps-list-item {
+  border-bottom: .1rem solid #E5E5E5;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.3rem;
+}
+.get-started-btn {
+  margin-top: 1.2rem;
+}
+.steps-list .steps-list-item:last-child {
+  border-bottom: 0;
 }
 /* Chrome/Opera/Safari */
 input[type="email"]::-webkit-input-placeholder,
@@ -922,6 +1103,51 @@ textarea::placeholder {
 .password-field-container .input-group-addon a i{
   color:#AFAFAF;
 }
+.api-user-form-wrapper .form-control{
+  height: 2.75rem;
+}
+.api-user-form-wrapper .form-control,
+.password-field-container,
+.password-field-container .password-field{
+  background-color: #fafafa;
+}
+.api-user-form-wrapper label {
+  margin-bottom: .2rem;
+}
+.api-user-form-wrapper .form-group {
+  margin-bottom: .8rem;
+}
+.api-sigin-forgot-password .form-check label,
+.api-user-forgot-password a{
+  font-size: .9rem;
+}
+.api-sigin-forgot-password{
+  margin-bottom: .5rem;
+}
+.password-policy-status {
+  border: 0.125rem solid #ff4a4a;
+  border-left: .4rem solid #ff4a4a;
+  padding-top: .5rem;
+  padding-right: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .8rem;
+}
+.password-policy-status li {
+  font-size: .85rem;
+  color: #797979;
+  margin-bottom: .3rem;
+}
+.password-policy-status li i {
+  font-size: 1rem;
+  color: #5c5959;
+  margin-right: .3rem;
+}
+.api-user-create .api-user-form-header-content,
+.api-reset-password .api-user-form-header-content,
+.api-user-create-form,
+.api-user-reset-form {
+  margin-bottom: 4rem;
+}
 /*------------------- IE 10+ Css Start -------------------*/
 @media all and (-ms-high-contrast:none) {
   .promo-item-content{
@@ -953,7 +1179,7 @@ textarea::placeholder {
     flex: 0 0 80%;
     max-width: 80%;
   }
- }
+}
  @media screen and (max-width: 768px) and (-ms-high-contrast:none) {
   .promo-content-container{
     padding-bottom: 8.5rem;
@@ -962,19 +1188,24 @@ textarea::placeholder {
 /*------------------- IE 10+ Css End -------------------*/
 
 /*------------------- Meida Query Start -------------------*/
+
 @media screen and (max-width: 1024px){
   .main-banner{
     margin-top: 0;
     background-size: 100% 77%;
   }
   .promo-item,
-  .promo-content-container  {
+  .promo-content-container,
+  .steps-list-container,
+  .product-tile-main-header  {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .promo-content-container {
+  .promo-content-container,
+  .promo-item,
+  .product-tile-main-header {
     -webkit-box-align: start;
     -ms-flex-align: start;
         align-items: flex-start;
@@ -987,40 +1218,64 @@ textarea::placeholder {
   .promo-item{
     padding-bottom: 3rem;
   }
-  .etisalat-logo-expo img{
-    max-width: 100%;
+  .product-tile-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
   }
-  .promo-item{
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-  .product-tile,
-  .product-tile-header{
+  .product-tile-header,
+  .product-tile-item {
     width: 100%;
   }
-  .product-tile{
-    height: 25rem;
+  .etisalat-logo-expo img,
+  .steps-icon, 
+  .steps-content,
+  .product-tile-item,
+  .product-tile-header{
+    max-width: 100%;
+  }
+  .product-tile-header{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  .steps-icon, 
+  .steps-content{
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
   }
   .product-tile-header {
     margin-top: 1rem;
+    margin-left: 0;
   }
-  .product-tile-main-header {
-    -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
+  .product-tile-description {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-  .product-tile-item {
-      margin-right: 0;
-      margin-bottom: 2rem;
+  .api-product-detail .product-tile-main-header{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .api-product-detail .product-tile-main-header{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .steps-icon{
+    padding-top: 0;
+    text-align: left;
   }
 }
-@media screen and (min-width: 992px){}
-
 @media screen and (min-width: 992px){
   .quick-links-list.collapse {
       display: block;
@@ -1045,32 +1300,40 @@ textarea::placeholder {
       top: 1.5rem;
       min-height: .1rem;
   }
-  .api-user-form-login{
+  .api-user-form-login {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
       flex: 0 0 100%;
-      -webkit-box-orient: vertical;
+  }
+  .api-user-form-login ,
+  .product-tile-main-header {
+    -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
   }
+  .product-tile-main-header {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+      align-items: flex-start;
+  }
   .api-user-form-inner{
-      width: 75%;
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
   }
   .quick-links-main-container .col-md-3,
   .footer-links-Logo .col-md-9,
-  .footer-links-Logo .col-md-3 {
+  .footer-links-Logo .col-md-3,
+  .product-tile-item {
       -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
+      -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   }
   .quick-links-main-container .col-md-3,
   .footer-links-Logo .col-md-9,
   .footer-links-Logo .col-md-3,
-  .api-user-form-inner,
-  .api-user-form-login{
+    .product-tile-icon,
+    .product-tile-header{
     max-width: 100%;
   }
   .links-title,
@@ -1079,16 +1342,16 @@ textarea::placeholder {
     display: none;
   }
   .links-title-mobile-view,
-  .accordion-menu > a,
+  .footer-accordion-menu > a,
   .copyright-mobile,
   .etisalat-logo-expo  {
     display: block;
   }
-  .accordion-menu,
-  .accordion-menu + .quick-links-list {
+  .footer-accordion-menu,
+  .footer-accordion-menu + .quick-links-list {
     margin-bottom: .8rem;
   }
-  .accordion-menu + .quick-links-list li:first-child a{
+  .footer-accordion-menu + .quick-links-list li:first-child a{
     padding-top:0;
   }
   .quick-links-main-container .quick-access-list li {
@@ -1114,13 +1377,13 @@ textarea::placeholder {
     padding-right: .5rem;
     margin-right: .5rem;
   }
-  .api-user-form-login{
+  .api-user-form-login {
     margin-bottom: 4rem;
   }
   .api-user-form-header-content{
     margin-bottom: 3.125rem;
   }
-  .etisalat-api-create-account a{
+  .api-form-footer a{
     padding-left: 0;
   }
   .etisalat-api-primary-btn{
@@ -1129,15 +1392,23 @@ textarea::placeholder {
   .etisalat-api-primary-btn span{
     text-align: left;
   }
+  .product-tile-header{
+    margin-left: 0;
+  }
+  .api-admin-icon{
+    margin-bottom: 1.875rem;
+  }
+  .api-user-form-wrapper .form-group{
+    margin-bottom: 1rem;
+  }
 }
 @media screen and (max-width: 768px){
-  .howto-steps-item-content,
   .promo-item,
   .promo-content-container {
     text-align: center;
   }
   .main-banner{
-    min-height: 452px;
+   height: 452px;
   }
   .main-banner-content h1{
     font-size:1.5rem;
@@ -1150,7 +1421,7 @@ textarea::placeholder {
     background-color: #F5F5F6;
   }
   .main-banner-content{
-    margin-top: 8rem;
+    margin-top: 6rem;
     margin-left: 1rem;
   }
   .promo-content-container,
@@ -1177,13 +1448,7 @@ textarea::placeholder {
     -ms-flex-align: center;
     align-items: center;
   }
-  .howto-steps-item-icon {
-    display: none;
-  }
-  .howto-steps-icon-mobile-view,
-  .links-title-mobile-view{
-    display: block;
-  }
+  
   .howto-steps-icon-mobile-view,
   .row.howto-steps-item {
       margin-bottom: 2rem;
@@ -1198,25 +1463,64 @@ textarea::placeholder {
   .register-sign-container .navbar-nav li:last-child a {
       display: inline-block;
   }
+  .api-inner-header-content {
+    margin-top: 6rem;
+  }
+  .howto-steps-item-content {
+    text-align: center;
+  }
+  .howto-steps-item-icon {
+    display: none;
+  }
+  .howto-steps-icon-mobile-view,
+  .links-title-mobile-view{
+    display: block;
+  }
+
 }
 @media screen and (max-width:568px){
+  
+  .main-banner-content {
+    margin-top: 8rem;
+  }
+  .main-banner{
+    background: #ffffff url(../images/inner-banner.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+  }
+  .subscribe-container{
+    margin-top: 1rem;
+  }
+  .subscribe-container,
+  .api-product-detail .product-tile-main-header{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
   .etisalat-api-page-description {
     font-size: 1.2rem;
   }
-  .api-sigin-forgot-password {
+  .api-product-detail .product-tile-main-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .api-product-detail .product-tile-header{
+    padding-left: 0;
+  }
   .api-sigin-forgot-password .form-check {
-    margin-bottom:1rem
+    margin-bottom:.3rem
   }
-  .api-user-form-inner {
+  .api-user-form-inner,
+  .etisalat-api-primary-btn {
       width: 100%;
-  }
-  .etisalat-api-primary-btn{
-    width: 100%;
   }
   .promo-content-container{
     -webkit-box-flex: 0;
@@ -1238,12 +1542,21 @@ textarea::placeholder {
     margin-bottom: 2rem;
   }
   .product-tile{
-    height: 27rem;
+    min-height: 25rem;
+  }
+  .product-tile-title{
+    font-size: 1.3rem;
   }
 }
-@media screen and (max-width:320px){
-  .product-tile{
-    height: 30rem;
+ @media screen and (max-width:320px){
+ /*  .product-tile{
+    height: 24rem;
+  } */
+  .api-sigin-forgot-password {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-}
+} 
 /*------------------- Meida Query End -------------------*/
