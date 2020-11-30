@@ -8,3 +8,14 @@ libraries:
   - etisalat/etisalat-css
   - etisalat/bootstrap
   - etisalat/popper
+
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  secondary_menu: Secondary Menu
+  highlighted: Highlighted
+  content: Content
+  featured_bottom: 'Featured bottom'
+  footer: Footer
+  page_top: Page top
+  page_bottom: Page bottom
